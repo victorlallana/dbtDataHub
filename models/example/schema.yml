@@ -10,9 +10,12 @@ models:
             tests:
                 - unique
                 - not_null
+<<<<<<< HEAD
                 - accepted_values:
                     values:
                       - "2"
+=======
+>>>>>>> 7a0b46981f4a494e0a7c7e523f16e76f99d9efe2
 
     - name: my_second_dbt_model
       description: "A starter dbt model"
