@@ -1,10 +1,14 @@
 version: 2
 
-sources:
-    - name: jaffle_shop
-      database: RAW
-      schema: JAFFLE_SHOP
-      tables:
-        - name: CUSTOMER
-        - name: ORDERS
-      
+
+models:
+    - name: stg_payment
+      description: "A starter dbt model"
+      columns:
+          - name: status
+            description: "The primary key for this table"
+            tests:
+                - not_null
+                - accepted_values:
+                    values: ['return_pending','retuned','completed']
+
