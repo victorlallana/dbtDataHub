@@ -1,6 +1,7 @@
+
+
 select
-    order_id,
+    id,
     user_id
-from {{ ref('stg_payment') }}
-group by order_id
-having user_id>5
+from RAW.JAFFLE_SHOP.ORDERS
+where user_id<3
